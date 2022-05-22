@@ -1,7 +1,5 @@
 // Funciones Anonimas
-
-let suma = funcion(a, b);
-{
+let suma = function (a, b) {
   console.log(a + b);
-}
+};
 suma(2, 4);
