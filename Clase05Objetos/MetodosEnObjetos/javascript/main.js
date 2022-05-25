@@ -1,3 +1,4 @@
+// Constructor con Funciones
 function Producto(id, nombre, precio) {
   this.id = id;
   this.nombre = nombre;
