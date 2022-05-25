@@ -3,6 +3,7 @@ verMenu();
 function verMenu() {
   let opcion = 0;
   let categoria = 0;
+
   while (opcion !== 5) {
     opcion = Number(
       prompt(`Ingrese una opcion:
@@ -13,26 +14,17 @@ function verMenu() {
                                 5. Salir`)
     );
 
+    let categoria = 0;
+    let i = "Hola";
     if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4) {
-      categoria = Number(
-        prompt(`Ingrese una opcion:
+      while (categoria >= 2) {
+        categoria = Number(
+          prompt(`Ingrese una opcion:
                                 1. blanco 
                                 2. rosa`)
-      );
-      let rosa = 2;
-      let blanco = 3;
-    }
-    switch (categoria) {
-      case 1: {
-        montorosa();
-
-        break;
+        );
       }
-
-      case 2: {
-        montoblanco();
-        break;
-      }
+      alert(`Categoria: ${categoria + valorDelProducto} `);
     }
 
     switch (opcion) {
@@ -66,16 +58,14 @@ function verMenu() {
     }
   }
 }
-function montorosa(categoria, rosa) {
-  alert("su monto categoria rosa es");
-}
-function montorosa(categoria, blanco) {
-  alert("su monto categoria blanco es");
-}
+
 function ventaCadenas() {
   cobrar(1);
 
   alert("Gracias por su compra!");
+  console.log(
+    `El Resultado de La Operacion Es: ${opcion} Categoria ${categoria}`
+  );
 }
 
 function ventaAretes() {
@@ -96,7 +86,7 @@ function cobrar(valorDelProducto) {
 
   while (dineroIngresado < valorDelProducto) {
     dineroIngresado += Number(
-      prompt(`El valor de su compra es ${categoria + valorDelProducto} 
+      prompt(`El valor de su compra es ${valorDelProducto} 
         Ingrese dinero:`)
     );
   }
