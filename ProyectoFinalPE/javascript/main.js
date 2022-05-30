@@ -53,3 +53,21 @@ function listarProductos() {
     );
   });
 }
+
+// Agregar Productos
+function agregarProducto() {
+  const referencia = prompt("Ingrese nueva Referencia");
+  const nombre = prompt("Ingrese el nombre del Producto");
+  const precio = prompt("Ingrese el precio del Producto");
+  let producto = [
+    {
+      referencia,
+      nombre,
+      precio,
+    },
+  ];
+  productos.push(producto);
+
+  console.log("PRODUCTO AGREGADO:");
+  console.log(productos);
+}
