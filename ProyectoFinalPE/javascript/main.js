@@ -71,3 +71,70 @@ function agregarProducto() {
   console.log("PRODUCTO AGREGADO:");
   console.log(productos);
 }
+
+// Calculadora
+function mostrarMenu() {
+  let opcion = 0;
+
+  while (opcion !== 5) {
+    opcion = Number(
+      prompt(`Ingrese una opcion
+                                1. SUMA
+                                2. RESTA
+                                3. MULTIPLICACION
+                                4. DIVISION
+                                5. FIN`)
+    );
+    let a = 0;
+    let b = 0;
+    if (opcion === 1 || opcion === 2 || opcion === 3 || opcion === 4) {
+      a = Number(prompt("Ingrese un numero:"));
+      b = Number(prompt("Ingrese otro numero:"));
+    }
+
+    switch (opcion) {
+      case 1: {
+        sumar(a, b);
+        break;
+      }
+      case 2: {
+        restar(a, b);
+        break;
+      }
+      case 3: {
+        multiplicar(a, b);
+        break;
+      }
+      case 4: {
+        let res = dividir(a, b);
+        alert("DIV" + res);
+        break;
+      }
+      case 5: {
+        alert("Gracias por usar nuestros Servicios!");
+        break;
+      }
+      default: {
+        alert("Ingrese una Opcion Valida!");
+        break;
+      }
+    }
+  }
+}
+
+function sumar(a, b) {
+  alert("La suma es" + (a + b));
+}
+
+function restar(a, b) {
+  alert("La resta es" + (a - b));
+}
+
+function multiplicar(a, b) {
+  alert("La miltiplicacion es" + a * b);
+}
+
+function dividir(a, b) {
+  let resultado = a / b;
+  return resultado;
+}
