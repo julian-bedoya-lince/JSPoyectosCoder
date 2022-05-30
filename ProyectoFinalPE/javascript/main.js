@@ -25,3 +25,21 @@ const productos = [
   { referencia: 1006, nombre: "anillo", precio: 180000 },
   { referencia: 1007, nombre: "reloj", precio: 180000 },
 ];
+
+// Consulatar Productos
+function consultar() {
+  let palabra = document.getElementById("palabra").value;
+  let palabraMinuscula = palabra.toLowerCase();
+  let referencia = parseInt(palabra);
+  console.log(palabraMinuscula);
+  let productoEncontrado = [];
+  productos.forEach((producto) => {
+    if (
+      producto.nombre.includes(palabraMinuscula) ||
+      producto.referencia == referencia
+    ) {
+      productoEncontrado.push(producto);
+    }
+  });
+  console.log(productoEncontrado);
+}
