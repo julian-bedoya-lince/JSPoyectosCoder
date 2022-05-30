@@ -43,3 +43,13 @@ function consultar() {
   });
   console.log(productoEncontrado);
 }
+
+// Listar Productos
+function listarProductos() {
+  console.log("LISTAR PRODUCTOS:");
+  productos.forEach((producto) => {
+    console.log(
+      producto.referencia + " " + producto.nombre + " " + producto.precio
+    );
+  });
+}
