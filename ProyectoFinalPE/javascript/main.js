@@ -2,7 +2,7 @@ let contrasena = "";
 let i = "Hola! ";
 
 while (contrasena !== "1234") {
-  const datoUsuario = prompt("Ingresar Usuario:");
+  const datoUsuario = prompt("Ingresar Usuario Adminstrador:");
   contrasena = prompt("Ingresar Contrasena:");
 
   if (contrasena !== "1234" || datoUsuario !== "Julian") {
@@ -17,13 +17,20 @@ while (contrasena !== "1234") {
 }
 
 const productos = [
-  { referencia: 1001, nombre: "areta", precio: 85000 },
-  { referencia: 1002, nombre: "cadena", precio: 35000 },
-  { referencia: 1003, nombre: "dije", precio: 180000 },
-  { referencia: 1004, nombre: "pulcera", precio: 180000 },
-  { referencia: 1005, nombre: "tobillera", precio: 180000 },
-  { referencia: 1006, nombre: "anillo", precio: 180000 },
-  { referencia: 1007, nombre: "reloj", precio: 180000 },
+  { referencia: 101, nombre: "arete Dama", precio: 85000 },
+  { referencia: 102, nombre: "arete Hombre", precio: 75000 },
+  { referencia: 103, nombre: "cadena Dama", precio: 135000 },
+  { referencia: 104, nombre: "cadena Hombre", precio: 165000 },
+  { referencia: 105, nombre: "dije Dama", precio: 18000 },
+  { referencia: 106, nombre: "dije Hombre", precio: 16000 },
+  { referencia: 107, nombre: "pulcera Dama", precio: 120000 },
+  { referencia: 108, nombre: "pulcera Hombre", precio: 130000 },
+  { referencia: 109, nombre: "tobillera Dama", precio: 110000 },
+  { referencia: 1010, nombre: "tobillera Hombre", precio: 120000 },
+  { referencia: 1011, nombre: "anillo Dama", precio: 180000 },
+  { referencia: 1012, nombre: "anillo Hombre", precio: 200000 },
+  { referencia: 1013, nombre: "reloj Dama", precio: 280000 },
+  { referencia: 1014, nombre: "reloj Hombre", precio: 340000 },
 ];
 
 // Consulatar Productos
