@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <script src="javascript/main.js"></script>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header> 
@@ -19,27 +20,36 @@
     </header>
     
 
-    <ul class="content">
-                                    <li class="html xtomenu-title">
+    
 <div class="h2">STORELYNX->PRODUCTOS!</div>
+<hr>
+<H2>LISTA DE PRODUCTOS!</H2>
 
+
+    <button onclick="listarProductos()">Mostrar</button>
+<hr>
 <h2>CONSULATAR PRODUCTO!</H2>
-<li  class="custom-link"> <input type="text" name="palabra" id="palabra">
+  <input type="text" name="palabra" id="palabra">
     <button onclick="consultar()">Consultar</button>
-</li>
+
 
 <H2>LISTA DE PRODUCTOS!</H2>
-<li 
-class="custom-link"> 
-    <button onclick="listarProductos()">Ingresar</button>
-</li>
+
+
+    <button onclick="listarProductos()">Listar</button>
+
 <H2>AGREGAR PRODUCTO!</H2>
-   <li> <button onclick="agregarProducto()">Ingresar</button>
-</li>
+    <button onclick="agregarProducto()">Agregar</button>
+<hr>
+
+<H2>CRUD USUARIO!</H2>
+ 
+    <button onclick="mostrarMenuUsuario()">Ingresar</button>
+<hr>
 <H2>CALCULADORA!</H2>
-<li class="custom-link"> 
+ 
     <button onclick="mostrarMenu()">Ingresar</button>
-</li> 
+<hr>
 
 <br>
 
