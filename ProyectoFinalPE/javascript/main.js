@@ -18,10 +18,10 @@ while (contrasena !== "1234") {
   }
 }
 
-let nombrProv = prompt("Ingrese su nombre");
+let nombreProv = prompt("Ingrese su nombre");
 
 const h1 = document.getElementsByTagName("h1")[0];
-h1.innerText = `!Bienvenido, ${nombrProv}!`;
+h1.innerText = `!Bienvenido, ${nombreProv}!`;
 
 const div = document.getElementById("productos");
 div.innerHTML = `<b>Esto es negrita</b><br/>
