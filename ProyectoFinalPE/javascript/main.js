@@ -1,25 +1,151 @@
-// let contrasena = "";
-// let i = "Hola! ";
+let contrasena = "";
+let i = "Hola! ";
 
-// while (contrasena !== "1234") {
-//   const datoUsuario = prompt("Ingresar Usuario Adminstrador:");
-//   contrasena = prompt("Ingresar Contrasena:");
+while (contrasena !== "1234") {
+  const datoUsuario = prompt("Ingresar Usuario Adminstrador:");
+  contrasena = prompt("Ingresar Contrasena:");
 
-//   if (contrasena !== "1234" || datoUsuario !== "Julian") {
-//     alert("Usuario o Contrasena Incorrecta!");
-//   } else {
-//     for (let i = 0; i >= datoUsuario; i++) {
-//       console.log(i);
-//     }
+  if (contrasena !== "1234" || datoUsuario !== "Ofelia") {
+    alert("Usuario o Contrasena Incorrecta!");
+  } else {
+    for (let i = 0; i >= datoUsuario; i++) {
+      console.log(i);
+    }
+  }
+}
 
-//     alert("BIENVENIDO!");
+function mostrarMenuProducto() {
+  let opcion = 0;
 
-//     console.log(`${i} ${datoUsuario}`);
-//   }
-// }
-let nombreProv = prompt("Ingrese su nombre");
+  while (opcion !== 4) {
+    opcion = Number(
+      prompt(`Seleccione una acción:
+                            1. Agregar Producto
+                            2. Listar Producto
+                            3. Consultar Producto
+                            4. Salir`)
+    );
+
+    switch (opcion) {
+      case 1: {
+        agregarProducto();
+        break;
+      }
+      case 2: {
+        listarProductos();
+        break;
+      }
+      case 3: {
+        consultar();
+        const encontrado = consultar();
+
+        if (encontrado) {
+          alert(`El usuario es:
+                          ID: ${encontrado.referencia}
+                          NOMBRE: ${encontrado.nombre}
+                          APELLIDO: ${encontrado.precio}`);
+        } else {
+          alert("NO LO ENCONTRÉ");
+        }
+
+        break;
+      }
+      case 4: {
+        alert("GRACIAS");
+        break;
+      }
+
+      default: {
+        alert("opcion inválida");
+        break;
+      }
+    }
+  }
+}
 const h1 = document.getElementsByTagName("h1")[0];
-h1.innerText = `!Bienvenido, ${nombreProv}!`;
+h1.innerText = `!Bienvenida, ${"Ofelia"}`;
+
+class Producto {
+  constructor(referencia, nombre, precio) {
+    this.referencia = referencia;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+function agregarProducto() {
+  const referencia = 0;
+  const nombre = prompt("Ingrese el nombre del Producto");
+  let precio = prompt("Ingrese el precio del Producto");
+
+  const productoagregado = new Producto(
+    getIdProd(),
+    referencia,
+    precio,
+    nombre
+  );
+
+  productos.push(productoagregado);
+
+  console.log("PRODUCTO AGREGADO:");
+
+  console.table(productos);
+}
+function getIdProd() {
+  if (productos.length === 0) {
+    return 1;
+  } else {
+    const ultimoP = productos[productos.length - 1];
+    return ultimoP.referencia + 1;
+  }
+}
+
+// Agregar Productos
+
+//   let producto = [
+//     {
+//       referencia,
+//       nombre,
+//       precio,
+//     },
+//   ];
+//   productos.push(producto);
+//   console.table("PRODUCTO AGREGADO:");
+
+//   console.table([
+//     {
+//       referencia,
+//       nombre,
+//       precio,
+//     },
+//   ]);
+//   console.table(productos);
+// }
+// Listar usuarios DOM
+function listarProductos(producto) {
+  const div = document.createElement("listarProductos");
+  div.setAttribute("class", producto.nombre);
+  // div.classList.add("otra_clase");
+  div.innerHTML = ` <div>${producto.referencia}
+                    ${producto.nombre}
+                    ${producto.precio}</div>`;
+
+  document.body.appendChild(div);
+}
+
+listarProductos(new Producto(101, "arete Dama", 85000));
+listarProductos(new Producto(102, "arete Hombre", 75000));
+listarProductos(new Producto(103, "cadena Dama", 135000));
+listarProductos(new Producto(104, "cadena Hombre", 165000));
+listarProductos(new Producto(105, "dije Dama", 18000));
+listarProductos(new Producto(106, "dije Hombre", 16000));
+listarProductos(new Producto(107, "pulcera Dama", 120000));
+listarProductos(new Producto(108, "pulcera Hombre", 130000));
+listarProductos(new Producto(109, "tobillera Dama", 110000));
+listarProductos(new Producto(1010, "tobillera Hombre", 120000));
+listarProductos(new Producto(1011, "anillo Dama", 180000));
+listarProductos(new Producto(1012, "anillo Hombre", 200000));
+listarProductos(new Producto(1013, "reloj Dama", 280000));
+listarProductos(new Producto(1014, "reloj Hombre", 340000));
 
 const productos = [
   { referencia: 101, nombre: "arete Dama", precio: 85000 },
@@ -38,7 +164,7 @@ const productos = [
   { referencia: 1014, nombre: "reloj Hombre", precio: 340000 },
 ];
 
-// Consulatar Productos
+//Consulatar Productos
 function consultar() {
   let palabra = document.getElementById("palabra").value;
   let palabraMinuscula = palabra.toLowerCase();
@@ -57,41 +183,16 @@ function consultar() {
 }
 
 // Listar Productos
-function listarProductos() {
-  console.table("LISTAR PRODUCTOS:");
-  productos.forEach((producto) => {
-    console.table(
-      ` ${producto.referencia}
-                           ${producto.nombre}
-                           ${producto.precio}`
-    );
-  });
-}
-
-// Agregar Productos
-function agregarProducto() {
-  const referencia = prompt("Ingrese nueva Referencia");
-  const nombre = prompt("Ingrese el nombre del Producto");
-  const precio = prompt("Ingrese el precio del Producto");
-  let producto = [
-    {
-      referencia,
-      nombre,
-      precio,
-    },
-  ];
-  productos.push(producto);
-  console.table("PRODUCTO AGREGADO:");
-
-  console.table([
-    {
-      referencia,
-      nombre,
-      precio,
-    },
-  ]);
-  console.table(productos);
-}
+// function listarProductos() {
+//   console.table("LISTAR PRODUCTOS:");
+//   productos.forEach((producto) => {
+//     console.table(
+//       ` ${producto.referencia}
+//                            ${producto.nombre}
+//                            ${producto.precio}`
+//     );
+//   });
+// }
 
 class Usuario {
   constructor(id, nombre, apellido) {

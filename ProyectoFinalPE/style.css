@@ -2,25 +2,31 @@
 
 /* Estilos Generales */
 
-header {
+/* header {
   background-color: #0e0703;
   font-family: "Junge", serif;
   font-size: 3rem;
-  /* font-weight: bold; */
-}
+  /* font-weight: bold; 
+} */
 body {
   background-color: #087a5c;
   /* color: #633f3f; */
 }
 
-h2 {
+h1 {
   font-family: "Junge", serif;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   /* font-weight: bold; */
 }
-
+div {
+  border-radius: 20px;
+  border: 1px solid blue;
+  margin: 1%;
+  padding: 1%;
+  /* max-width:3px" */
+}
 hr {
-  height: 2px !important;
+  height: 1px !important;
   background-color: #cfa51b;
 
   opacity: 1 !important;
@@ -45,8 +51,8 @@ span {
 }
 
 @media (min-width: 1200px) {
-  .card img {
+  /* .card img {
     width: 50%;
     height: 50%;
-  }
+  } */
 }
