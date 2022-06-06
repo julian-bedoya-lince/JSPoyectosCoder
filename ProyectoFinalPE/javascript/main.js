@@ -1,27 +1,27 @@
-// let contrasena = "";
-// let i = "Hola! ";
+let contrasena = "";
+let i = "Hola! ";
 
-// while (contrasena !== "1234") {
-//   const datoUsuario = prompt("Ingresar Usuario Adminstrador:");
-//   contrasena = prompt("Ingresar Contrasena:");
+while (contrasena !== "1234") {
+  const datoUsuario = prompt("Ingresar Usuario Adminstrador:");
+  contrasena = prompt("Ingresar Contrasena:");
 
-//   if (contrasena !== "1234" || datoUsuario !== "Julian") {
-//     alert("Usuario o Contrasena Incorrecta!");
-//   } else {
-//     for (let i = 0; i >= datoUsuario; i++) {
-//       console.log(i);
-//     }
+  if (contrasena !== "1234" || datoUsuario !== "Julian") {
+    alert("Usuario o Contrasena Incorrecta!");
+  } else {
+    for (let i = 0; i >= datoUsuario; i++) {
+      console.log(i);
+    }
 
-//     alert("BIENVENIDO!");
-//
-//     console.log(`${i} ${nombre}`);
-//   }
-// }
+    alert("BIENVENIDO!");
 
-let nombre = prompt("Ingrese su nombre");
+    // console.log(`${i} ${datoUsuario}`);
+  }
+}
+
+let nombrProv = prompt("Ingrese su nombre");
 
 const h1 = document.getElementsByTagName("h1")[0];
-h1.innerText = `!Bienvenido, ${nombre}!`;
+h1.innerText = `!Bienvenido, ${nombrProv}!`;
 
 const div = document.getElementById("productos");
 div.innerHTML = `<b>Esto es negrita</b><br/>
