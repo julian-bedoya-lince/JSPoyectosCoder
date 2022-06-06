@@ -1,33 +1,25 @@
-let contrasena = "";
-let i = "Hola! ";
+// let contrasena = "";
+// let i = "Hola! ";
 
-while (contrasena !== "1234") {
-  const datoUsuario = prompt("Ingresar Usuario Adminstrador:");
-  contrasena = prompt("Ingresar Contrasena:");
+// while (contrasena !== "1234") {
+//   const datoUsuario = prompt("Ingresar Usuario Adminstrador:");
+//   contrasena = prompt("Ingresar Contrasena:");
 
-  if (contrasena !== "1234" || datoUsuario !== "Julian") {
-    alert("Usuario o Contrasena Incorrecta!");
-  } else {
-    for (let i = 0; i >= datoUsuario; i++) {
-      console.log(i);
-    }
+//   if (contrasena !== "1234" || datoUsuario !== "Julian") {
+//     alert("Usuario o Contrasena Incorrecta!");
+//   } else {
+//     for (let i = 0; i >= datoUsuario; i++) {
+//       console.log(i);
+//     }
 
-    alert("BIENVENIDO!");
+//     alert("BIENVENIDO!");
 
-    // console.log(`${i} ${datoUsuario}`);
-  }
-}
-
+//     console.log(`${i} ${datoUsuario}`);
+//   }
+// }
 let nombreProv = prompt("Ingrese su nombre");
-
 const h1 = document.getElementsByTagName("h1")[0];
 h1.innerText = `!Bienvenido, ${nombreProv}!`;
-
-const div = document.getElementById("productos");
-div.innerHTML = `<b>Esto es negrita</b><br/>
-                  Esto no es negrita<br/>
-                  <i>Esto es itálica</i><br/>
-                  <p>Esto es un párrafo</p>`;
 
 const productos = [
   { referencia: 101, nombre: "arete Dama", precio: 85000 },
@@ -69,7 +61,9 @@ function listarProductos() {
   console.table("LISTAR PRODUCTOS:");
   productos.forEach((producto) => {
     console.table(
-      producto.referencia + " " + producto.nombre + " " + producto.precio
+      ` ${producto.referencia}
+                           ${producto.nombre}
+                           ${producto.precio}`
     );
   });
 }
