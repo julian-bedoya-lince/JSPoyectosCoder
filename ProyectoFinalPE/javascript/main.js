@@ -36,16 +36,15 @@ function mostrarMenuProducto() {
         break;
       }
       case 3: {
-        consultar();
-        const encontrado = consultar();
+        const encontrado = consultarProducto();
 
         if (encontrado) {
-          alert(`El usuario es:
-                          ID: ${encontrado.referencia}
+          alert(`PRODUCTO ENCONTRADO:
+                          REF: ${encontrado.referencia}
                           NOMBRE: ${encontrado.nombre}
-                          APELLIDO: ${encontrado.precio}`);
+                          PRECIO: ${encontrado.precio}`);
         } else {
-          alert("NO LO ENCONTRÉ");
+          alert("PPRDUCTOS NO SE ENCUENTRA");
         }
 
         break;
@@ -63,7 +62,42 @@ function mostrarMenuProducto() {
   }
 }
 const h1 = document.getElementsByTagName("h1")[0];
-h1.innerText = `!Bienvenida, ${"Ofelia"}`;
+h1.innerText = `!Bienvenida, ${"Julian"}`;
+
+const productos = [
+  { referencia: 101, nombre: "arete Dama", precio: 85000 },
+  { referencia: 102, nombre: "arete Hombre", precio: 75000 },
+  { referencia: 103, nombre: "cadena Dama", precio: 135000 },
+  { referencia: 104, nombre: "cadena Hombre", precio: 165000 },
+  { referencia: 105, nombre: "dije Dama", precio: 18000 },
+  { referencia: 106, nombre: "dije Hombre", precio: 16000 },
+  { referencia: 107, nombre: "pulcera Dama", precio: 120000 },
+  { referencia: 108, nombre: "pulcera Hombre", precio: 130000 },
+  { referencia: 109, nombre: "tobillera Dama", precio: 110000 },
+  { referencia: 1010, nombre: "tobillera Hombre", precio: 120000 },
+  { referencia: 1011, nombre: "anillo Dama", precio: 180000 },
+  { referencia: 1012, nombre: "anillo Hombre", precio: 200000 },
+  { referencia: 1013, nombre: "reloj Dama", precio: 280000 },
+  { referencia: 1014, nombre: "reloj Hombre", precio: 340000 },
+];
+
+//Consulatar Productos
+// function consultar() {
+//   let palabra = document.getElementById("palabra").value;
+//   let palabraMinuscula = palabra.toLowerCase();
+//   let referencia = parseInt(palabra);
+//   console.log(palabraMinuscula);
+//   let productoEncontrado = [];
+//   productos.forEach((producto) => {
+//     if (
+//       producto.nombre.includes(palabraMinuscula) ||
+//       producto.referencia == referencia
+//     ) {
+//       productoEncontrado.push(producto);
+//     }
+//   });
+//   console.log(productoEncontrado);
+// }
 
 class Producto {
   constructor(referencia, nombre, precio) {
@@ -73,16 +107,14 @@ class Producto {
   }
 }
 function agregarProducto() {
-  const referencia = 0;
-  const nombre = prompt("Ingrese el nombre del Producto");
-  let precio = prompt("Ingrese el precio del Producto");
+  let referencia = 1;
+  if (productos.length > 0) {
+    referencia = productos[productos.length - 1].referencia + 1;
+  }
+  const nombre = prompt("Ingrese el nombre del Producto:");
+  let precio = prompt("Ingrese el precio del Producto:");
 
-  const productoagregado = new Producto(
-    getIdProd(),
-    referencia,
-    precio,
-    nombre
-  );
+  const productoagregado = new Producto(referencia, nombre, precio);
 
   productos.push(productoagregado);
 
@@ -90,14 +122,14 @@ function agregarProducto() {
 
   console.table(productos);
 }
-function getIdProd() {
-  if (productos.length === 0) {
-    return 1;
-  } else {
-    const ultimoP = productos[productos.length - 1];
-    return ultimoP.referencia + 1;
-  }
-}
+// function getIdProd() {
+//   if (productos.length === 0) {
+//     return 1;
+//   } else {
+//     const ultimoP = productos[productos.length - 1];
+//     return ultimoP.referencia + 1;
+//   }
+// }
 
 // Agregar Productos
 
@@ -121,7 +153,7 @@ function getIdProd() {
 //   console.table(productos);
 // }
 // Listar usuarios DOM
-function listarProductos(producto) {
+function listadoProductos(producto) {
   const div = document.createElement("listarProductos");
   div.setAttribute("class", producto.nombre);
   // div.classList.add("otra_clase");
@@ -131,55 +163,37 @@ function listarProductos(producto) {
 
   document.body.appendChild(div);
 }
-
-listarProductos(new Producto(101, "arete Dama", 85000));
-listarProductos(new Producto(102, "arete Hombre", 75000));
-listarProductos(new Producto(103, "cadena Dama", 135000));
-listarProductos(new Producto(104, "cadena Hombre", 165000));
-listarProductos(new Producto(105, "dije Dama", 18000));
-listarProductos(new Producto(106, "dije Hombre", 16000));
-listarProductos(new Producto(107, "pulcera Dama", 120000));
-listarProductos(new Producto(108, "pulcera Hombre", 130000));
-listarProductos(new Producto(109, "tobillera Dama", 110000));
-listarProductos(new Producto(1010, "tobillera Hombre", 120000));
-listarProductos(new Producto(1011, "anillo Dama", 180000));
-listarProductos(new Producto(1012, "anillo Hombre", 200000));
-listarProductos(new Producto(1013, "reloj Dama", 280000));
-listarProductos(new Producto(1014, "reloj Hombre", 340000));
-
-const productos = [
-  { referencia: 101, nombre: "arete Dama", precio: 85000 },
-  { referencia: 102, nombre: "arete Hombre", precio: 75000 },
-  { referencia: 103, nombre: "cadena Dama", precio: 135000 },
-  { referencia: 104, nombre: "cadena Hombre", precio: 165000 },
-  { referencia: 105, nombre: "dije Dama", precio: 18000 },
-  { referencia: 106, nombre: "dije Hombre", precio: 16000 },
-  { referencia: 107, nombre: "pulcera Dama", precio: 120000 },
-  { referencia: 108, nombre: "pulcera Hombre", precio: 130000 },
-  { referencia: 109, nombre: "tobillera Dama", precio: 110000 },
-  { referencia: 1010, nombre: "tobillera Hombre", precio: 120000 },
-  { referencia: 1011, nombre: "anillo Dama", precio: 180000 },
-  { referencia: 1012, nombre: "anillo Hombre", precio: 200000 },
-  { referencia: 1013, nombre: "reloj Dama", precio: 280000 },
-  { referencia: 1014, nombre: "reloj Hombre", precio: 340000 },
-];
-
-//Consulatar Productos
-function consultar() {
-  let palabra = document.getElementById("palabra").value;
-  let palabraMinuscula = palabra.toLowerCase();
-  let referencia = parseInt(palabra);
-  console.log(palabraMinuscula);
-  let productoEncontrado = [];
+function listarProductos() {
+  console.log("LISTAR PRODUCTOS:");
   productos.forEach((producto) => {
-    if (
-      producto.nombre.includes(palabraMinuscula) ||
-      producto.referencia == referencia
-    ) {
-      productoEncontrado.push(producto);
-    }
+    console.table(
+      `${producto.referencia} ${producto.nombre} ${producto.precio}`
+    );
   });
-  console.log(productoEncontrado);
+}
+listadoProductos(new Producto(101, "arete Dama", 85000));
+listadoProductos(new Producto(102, "arete Hombre", 75000));
+listadoProductos(new Producto(103, "cadena Dama", 135000));
+listadoProductos(new Producto(104, "cadena Hombre", 165000));
+listadoProductos(new Producto(105, "dije Dama", 18000));
+listadoProductos(new Producto(106, "dije Hombre", 16000));
+listadoProductos(new Producto(107, "pulcera Dama", 120000));
+listadoProductos(new Producto(108, "pulcera Hombre", 130000));
+listadoProductos(new Producto(109, "tobillera Dama", 110000));
+listadoProductos(new Producto(1010, "tobillera Hombre", 120000));
+listadoProductos(new Producto(1011, "anillo Dama", 180000));
+listadoProductos(new Producto(1012, "anillo Hombre", 200000));
+listadoProductos(new Producto(1013, "reloj Dama", 280000));
+listadoProductos(new Producto(1014, "reloj Hombre", 340000));
+function consultarProducto() {
+  let nombre = prompt("Ingresa nombre del producto que quieras buscar");
+
+  let encontrados = productos.filter(
+    (producto) =>
+      producto.nombre.toLowerCase().indexOf(nombre.toLocaleLowerCase()) !== -1
+  );
+
+  console.table("BUCAR PRODUCTOS:", encontrados);
 }
 
 // Listar Productos
