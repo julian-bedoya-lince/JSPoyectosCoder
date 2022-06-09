@@ -1,20 +1,25 @@
 body {
+  background-color: #087a5c;
   border: 1px solid gray;
   border-radius: 20px;
   margin: 2%;
   padding: 2%;
+  /* color: #633f3f; */
 }
+
 h1 {
+  font-family: "Junge", serif;
   color: blue;
   text-align: center;
+  /* font-size: 1rem; */
+  /* font-weight: bold; */
 }
 h3 {
   border-bottom: 1px solid aquamarine;
   padding: 1%;
 }
-
 button {
-  background-color: blue;
+  background-color: rgb(4, 4, 24);
   width: 200px;
   height: 50px;
   color: white;
@@ -28,9 +33,8 @@ button:hover,
 button.active {
   color: blue;
   background-color: white;
-  border: 1px solid blue;
+  border: 1px solid rgb(255, 157, 0);
 }
-
 table {
   margin-top: 20px;
   margin-left: 2%;
@@ -52,4 +56,21 @@ th {
 td {
   padding: 3%;
   padding-bottom: 1%;
+}
+div {
+  border-radius: 20px;
+  border: 1px solid blue;
+  margin: 1%;
+  padding: 1%;
+  /* max-width:3px" */
+}
+hr {
+  height: 1px !important;
+  background-color: #cfa51b;
+
+  opacity: 1 !important;
+}
+
+span {
+  color: #633f3f;
 }

@@ -13,12 +13,12 @@
 // Pedir el ide dl que quiere modificat
 // Crear clase usuario
 
-const usuario1 = new Usuario(1, "Natalia", "Chiara");
-const usuario2 = new Usuario(2, "Diego", "Del Hoyo");
-const usuario3 = new Usuario(3, "Alejandro", "Lombardi");
-const usuario4 = new Usuario(4, "Diego", "Castro");
-const usuario5 = new Usuario(5, "Gabriel", "Odirozola");
-const usuario6 = new Usuario(6, "Juan", "Ferrari");
+const usuario1 = new Usuario(1, "Reynel", "Bedoya");
+const usuario2 = new Usuario(2, "jenny", "Molina");
+const usuario3 = new Usuario(3, "Yanely", "Carrasquilla");
+const usuario4 = new Usuario(4, "tefha", "Jarramillo");
+const usuario5 = new Usuario(5, "Kathe", "Osorio");
+const usuario6 = new Usuario(6, "Carlos", "Molina");
 
 const usuarios = [usuario1, usuario2, usuario3, usuario4, usuario5, usuario6];
 console.log("INICIAL:", usuarios);
@@ -31,7 +31,7 @@ function mostrarMenu() {
 
   while (opcion !== 10) {
     opcion = Number(
-      prompt(`Seleccione una acción:
+      prompt(`Seleccione una accion:
                            1. Agregar Usuario 
                            2. Eliminar Usuario
                            3. Modificar Usuario
@@ -100,3 +100,20 @@ function listarNombreMasApellido() {
   console.log("MAP:");
   console.log(nombresYApellidos);
 }
+
+const producto1 = new Producto(101, "arete Dama", 85000);
+const producto2 = new Producto(103, "cadena Dama", 135000);
+const producto3 = new Producto(105, "dije Dama", 18000);
+const producto4 = new Producto(107, "pulcera Dama", 120000);
+const producto5 = new Producto(109, "tobillera Dama", 110000);
+const producto6 = new Producto(1011, "anillo Dama", 180000);
+
+const productos = [
+  Producto1,
+  Producto2,
+  Producto3,
+  Producto4,
+  Producto5,
+  Producto6,
+];
+console.log("INICIAL:", productos);

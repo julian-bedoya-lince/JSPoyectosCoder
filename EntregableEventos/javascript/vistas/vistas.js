@@ -1,8 +1,3 @@
-/*
-    Inicializa la aplicación
-    Agrega H1 
-    Agrega Subtítulo
-*/
 function inicializarAplicacion() {
   crearTitulo();
   crearMenu();
@@ -10,7 +5,7 @@ function inicializarAplicacion() {
 
 function crearTitulo() {
   const miTitulo = document.createElement("h1");
-  miTitulo.innerText = "Sistema de Gestión de Usuarios";
+  miTitulo.innerText = "Sistema de Gestion de Usuarios";
   document.body.appendChild(miTitulo);
 }
 function crearMenu() {
@@ -50,9 +45,7 @@ function crearMenu() {
     document.body.appendChild(btn);
   });
 }
-/*
-    Muestra el listado de usuarios del sistema
-*/
+
 function listarUsuarios(miListaDeUsuarios) {
   let miLista = document.querySelector("#listaUsuarios");
   if (!miLista) {
