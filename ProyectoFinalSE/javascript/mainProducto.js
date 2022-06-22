@@ -16,7 +16,6 @@ const productos = [
 console.log("INICIAL:", productos);
 
 inicializarAplicacionP();
-//mostrarMenu();
 
 function mostrarMenuProducto() {
   let opcion = 0;

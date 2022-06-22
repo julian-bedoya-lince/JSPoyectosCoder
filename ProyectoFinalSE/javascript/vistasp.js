@@ -50,7 +50,7 @@ function listarProducto(miListaDeProductos) {
   let miListap = document.querySelector("#listaProductos");
   if (!miListap) {
     miListap = document.createElement("table");
-    miListap.setAttribute("ref", "listaProductos");
+    miListap.setAttribute("id", "listaProductos");
   }
   miListap.innerHTML = "";
 
@@ -117,7 +117,7 @@ function agregarProducto() {
   let producto = new Producto(ref, nombre, precio);
 
   productos.push(producto);
-  //   console.table(productos);
+  console.table(productos);
   listarProducto(productos);
 }
 
