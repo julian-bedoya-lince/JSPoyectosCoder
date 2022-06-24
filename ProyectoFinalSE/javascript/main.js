@@ -90,8 +90,8 @@ function showProducts(categoryName = "") {
 function addProduct(idProducto) {
   const producto = products.find((element) => element.id == idProducto);
   carrito.productos.push(producto);
-  showCarrito();
   calcularTotal();
+  showCarrito();
 }
 
 function showCarrito() {
@@ -118,11 +118,17 @@ function calcularTotal() {
   const divLista = document.getElementById("total");
   divLista.innerHTML = "";
   carrito.productos.forEach((product) => {
+    obtenerTotal = function () {
+      const total = product.price;
+      return total;
+    };
+
+    total += obtenerTotal();
     const nodo = document.createElement("div");
     nodo.classList.add("producPrice");
     nodo.innerHTML = `
                             <div class="producPrice">
-                                <b> Total: $  ${product.price} </b>
+                                <b> Total: $  ${product.price}  </b>
                             </div>`;
 
     divLista.appendChild(nodo);
