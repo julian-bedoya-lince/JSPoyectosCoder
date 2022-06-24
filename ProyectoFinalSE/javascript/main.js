@@ -91,6 +91,7 @@ function addProduct(idProducto) {
   const producto = products.find((element) => element.id == idProducto);
   carrito.productos.push(producto);
   showCarrito();
+  calcularTotal();
 }
 
 function showCarrito() {
@@ -108,6 +109,35 @@ function showCarrito() {
                             <div class="producPrice">
                                 <b>$ ${product.price} </b>
                             </div>`;
+
     divLista.appendChild(nodo);
   });
 }
+
+function calcularTotal() {
+  const divLista = document.getElementById("total");
+  divLista.innerHTML = "";
+  carrito.productos.forEach((product) => {
+    const nodo = document.createElement("div");
+    nodo.classList.add("producPrice");
+    nodo.innerHTML = `
+                            <div class="producPrice">
+                                <b> Total: $  ${product.price} </b>
+                            </div>`;
+
+    divLista.appendChild(nodo);
+  });
+}
+
+// class Operandos {
+//   constructor(price1, price2) {
+//     this.price1 = price1;
+//     this.price2 = price2;
+//   }
+// }
+// const precios = new Operandos(53021, 34004);
+
+// sumar(precios);
+// function sumar({ price1, price2 }) {
+//   alert(price1 + price2);
+// }
