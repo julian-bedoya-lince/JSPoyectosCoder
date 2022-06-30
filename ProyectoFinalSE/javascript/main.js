@@ -134,7 +134,17 @@ function calcularTotal() {
     divLista.appendChild(nodo);
   });
 }
-
+function saludarConSweetAlert() {
+  const boton = document.getElementById("btnSweet");
+  boton.addEventListener("click", () => {
+    Swal.fire({
+      title: "¡Hola, a todos!",
+      text: "Esto es un saludo con Sweet Alert",
+      icon: "error",
+      confirmButtonText: "¡Está muy Piola!",
+    });
+  });
+}
 // class Operandos {
 //   constructor(price1, price2) {
 //     this.price1 = price1;
