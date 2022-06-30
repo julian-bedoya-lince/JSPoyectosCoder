@@ -4,9 +4,11 @@ let carrito = new Carrito([]);
 initApp();
 
 function initApp() {
+  saludarConSweetAlert();
   loadMode();
   programarModeBtn();
   loadData();
+  agregarProducto();
 }
 
 function loadData() {

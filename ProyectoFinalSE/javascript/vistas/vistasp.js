@@ -1,6 +1,7 @@
 function inicializarAplicacionP() {
   crearTituloP();
   crearMenuP();
+  agregarProducto();
 }
 
 function crearTituloP() {
@@ -106,21 +107,43 @@ function programarEventosP() {
   });
 }
 
+// function agregarProducto() {
+//   let ref = 1;
+//   if (productos.length > 0) {
+//     ref = productos[productos.length - 1].ref + 1;
+//   }
+
+//   let nombre = prompt("ingrese una nombre producto");
+//   let precio = prompt("ingrese un precio del producto");
+//   let producto = new Producto(ref, nombre, precio);
+
+//   productos.push(producto);
+//   console.table(productos);
+//   listarProducto(productos);
+// }
+
 function agregarProducto() {
-  let ref = 1;
-  if (productos.length > 0) {
-    ref = productos[productos.length - 1].ref + 1;
-  }
+  // let ref = 1;
+  // if (productos.length > 0) {
+  //   ref = productos[productos.length - 1].ref + 1;
+  // }
+  const boton = document.getElementById("btnSweet2");
+  boton.addEventListener("click", () => {
+    let nombre = prompt("ingrese una nombre producto");
+    let precio = prompt("ingrese un precio del producto");
+    Swal.fire({
+      title: `producto agregado, ${nombre}!, ${precio}`,
+      text: "Esto es un saludo con Sweet Alert",
+      icon: "success",
+      confirmButtonText: "¡Está muy Piola!",
+    });
+  });
+  // let producto = new Producto(ref, nombre, precio);
 
-  let nombre = prompt("ingrese una nombre producto");
-  let precio = prompt("ingrese un precio del producto");
-  let producto = new Producto(ref, nombre, precio);
-
-  productos.push(producto);
-  console.table(productos);
-  listarProducto(productos);
+  // productos.push(producto);
+  // console.table(productos);
+  // listarProducto(productos);
 }
-
 function buscarProducto() {
   let paramBusqueda = prompt("Ingresa el nombre que quieres buscar");
 
