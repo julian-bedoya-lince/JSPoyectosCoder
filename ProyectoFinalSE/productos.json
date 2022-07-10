@@ -1,0 +1,30 @@
+[
+  {
+    "id": 101,
+    "nombre": "Dige Cruz",
+    "categoria": "Diges",
+    "foto": "/img/dige1.jpg",
+    "precio": 85000
+  },
+  {
+    "id": 103,
+    "nombre": "Dige Cruz",
+    "categoria": "Diges",
+    "foto": "/img/dige2.jpg",
+    "precio": 135000
+  },
+  {
+    "id": 208,
+    "nombre": "Dige Cruz",
+    "categoria": "Diges",
+    "foto": "/img/dige3.jpg",
+    "precio": 135000
+  },
+  {
+    "id": 305,
+    "nombre": "Dige Cruz",
+    "categoria": "Diges",
+    "foto": "/img/dige4.jpg",
+    "precio": 135000
+  }
+]
