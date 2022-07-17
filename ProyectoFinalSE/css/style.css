@@ -1,28 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Junge&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Junge&display=swap"); 
 
-Estilos Generales */ header {
-  background-color: #0e0703;
+/*Estilos Generales */
+ header {
   font-family: "Junge", serif;
-  font-size: 3rem;
+
   font-weight: bold;
 }
 body {
-  background-color: #087a5c;
-  border: 1px solid gray;
+  background-color: black;
+  border: 1px solid white;
   border-radius: 20px;
   margin: 2%;
   padding: 2%;
-  /* color: #633f3f; */
+   color: white; 
 }
-#elements {
-  display: grid;
+#elements { 
+display: grid;
+
+  background-color: black;
   grid-template-columns: repeat(4, 1fr);
 }
 .productos {
-  border: 1px solid aqua;
+  border: 1px solid black;
+  background-color: rgb(2, 45, 51);
+
   border-radius: 40px;
   padding: 1rem;
-  width: 60%;
+  width: 55%;
   margin: 1rem;
 }
 .foto {
@@ -30,35 +34,44 @@ body {
   margin: auto;
   max-width: 100%;
   border-radius: 90px;
+  border: 2px solid black;
 }
 
 h1 {
   font-family: "Junge", serif;
-  color: blue;
+  color: rgb(199, 169, 0);
+  text-align: center; 
+/* font-size: 1rem; */
+/* font-weight: bold; */
+ }
+h4,
+h6 {
+  font-family: "Junge", serif;
+  color: rgb(199, 169, 0);
   text-align: center;
   /* font-size: 1rem; */
-  /* font-weight: bold; */
+/* font-weight: bold; */
 }
 h3 {
   border-bottom: 1px solid aquamarine;
   padding: 1%;
 }
 button {
-  background-color: blue;
+  background-color: black;
   width: 200px;
   height: 50px;
-  color: white;
+  color: rgb(199, 169, 0);
   font-weight: bold;
-  margin-left: 2%;
+  margin-left: -7%;
   border-radius: 20px;
   border: 0;
   cursor: pointer;
-}
-button:hover,
+} 
+ button:hover,
 button.active {
-  color: blue;
-  background-color: white;
-  border: 1px solid blue;
+  color: black;
+  background-color: rgb(122, 105, 4);
+  border: 1px solid black;
 }
 table {
   margin-top: 20px;
@@ -69,8 +82,8 @@ table {
 }
 tr:nth-child(even) {
   background-color: cornflowerblue;
-  color: white;
-}
+  color: blanchedalmond;
+} 
 
 th {
   padding: 3%;
@@ -84,10 +97,10 @@ td {
 }
 div {
   border-radius: 20px;
-  border: 1px solid blue;
+  border: 1px solid black;
   margin: 1%;
   padding: 1%;
-  /* max-width:3px" */
+   max-width:3px" 
 }
 hr {
   height: 1px !important;
@@ -97,8 +110,36 @@ hr {
 }
 
 span {
-  color: #633f3f;
+  color: black;
+} 
+
+.pages {
+  background-color: #777faf;
+  border-radius: 20px;
 }
+
+.pages ul {
+  text-align: center;
+}
+
+.pages ul a {
+  -webkit-text-decoration: solid;
+  text-decoration: solid;
+}
+
+.pages ul a i {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #777faf;
+  color: black;
+}
+
+body {
+  font: nomal 24px/1.5 "open Sans", sans-serif;
+  background-color: rgb(2, 45, 51);
+}
+/*# sourceMappingURL=styles.css.map */
 
 /* Media Queries */
 

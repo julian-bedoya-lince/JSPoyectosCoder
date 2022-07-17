@@ -7,24 +7,108 @@
     "precio": 85000
   },
   {
-    "id": 103,
+    "id": 102,
     "nombre": "Dige Cruz",
     "categoria": "Diges",
     "foto": "/img/dige2.jpg",
     "precio": 135000
   },
   {
-    "id": 208,
+    "id": 103,
     "nombre": "Dige Cruz",
     "categoria": "Diges",
     "foto": "/img/dige3.jpg",
-    "precio": 135000
+    "precio": 123000
   },
   {
-    "id": 305,
+    "id": 104,
     "nombre": "Dige Cruz",
     "categoria": "Diges",
     "foto": "/img/dige4.jpg",
     "precio": 135000
+  },
+  {
+    "id": 201,
+    "nombre": "Cadena Cordon Cuadrado",
+    "categoria": "cadena",
+    "foto": "/img/cadena1.jpg",
+    "precio": 145000
+  },
+  {
+    "id": 202,
+    "nombre": "Cadena Espiga",
+    "categoria": "cadena",
+    "foto": "/img/cadena5.jpg",
+    "precio": 167000
+  },
+  {
+    "id": 203,
+    "nombre": "Cadena Aros",
+    "categoria": "cadena",
+    "foto": "/img/cadena3.jpg",
+    "precio": 175000
+  },
+  {
+    "id": 204,
+    "nombre": "Cadena Espiga Gruesa",
+    "categoria": "cadena",
+    "foto": "/img/cadena4.jpg",
+    "precio": 195000
+  },
+  {
+    "id": 301,
+    "nombre": "Aretes",
+    "categoria": "aretes",
+    "foto": "/img/aretes1.jpg",
+    "precio": 95000
+  },
+  {
+    "id": 302,
+    "nombre": "Aretes Petalos",
+    "categoria": "aretes",
+    "foto": "/img/aretes5.jpg",
+    "precio": 100000
+  },
+  {
+    "id": 303,
+    "nombre": "Aretes Balines",
+    "categoria": "aretes",
+    "foto": "/img/aretes3.jpg",
+    "precio": 97000
+  },
+  {
+    "id": 304,
+    "nombre": "Aretes Huella de Perro",
+    "categoria": "aretes",
+    "foto": "/img/aretes4.jpg",
+    "precio": 75000
+  },
+  {
+    "id": 401,
+    "nombre": "Anilos",
+    "categoria": "anillo",
+    "foto": "/img/anillo1.jfif",
+    "precio": 185000
+  },
+  {
+    "id": 402,
+    "nombre": "Anilos",
+    "categoria": "anillo",
+    "foto": "/img/anillo2.jpg",
+    "precio": 175000
+  },
+  {
+    "id": 501,
+    "nombre": "Pulsera",
+    "categoria": "pulsera",
+    "foto": "/img/pulsera1.jpg",
+    "precio": 123000
+  },
+  {
+    "id": 502,
+    "nombre": "Pulsera",
+    "categoria": "pulsera",
+    "foto": "/img/pulsera2.jfif",
+    "precio": 123000
   }
 ]
