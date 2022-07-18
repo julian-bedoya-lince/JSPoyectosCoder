@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link rel="stylesheet" href="css/styles.css">
-        <script  src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        
-        <script src="javascript/helpers/modeBehavior.js" defer></script>
-        <script src="javascript//vistas/mainCarrito.js" defer ></script>
-        <script src="javascript/classes/carrito.class.js"></script>
-        <script src="javascript/classes/categoria.class.js"></script>
-        <script src="javascript/data/products.data.js"></script>
-        <script src="javascript/helpers/modeBehavior.js" defer></script>
-        
+
+    <link rel="stylesheet" href="css/style.css">
+     
+     
+    <script  src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+   
+        <script defer src="javascript/helpers/modeBehavior.js" ></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
      crossorigin="anonymous"/>
          <link rel="shortcut icon" href="#">
+        <script defer src="javascript/vistas/main.js"  ></script> 
+    <script defer src="javascript/mainProducto.js"></script> 
 
 </head>
 <body>
@@ -33,45 +35,49 @@
                 <nav class="main-nav">
                     
                         <ul>
-                            
+                           
                            <strong><a  href="index.html"><i class="fas fa-users">HOME</i> </a></strong> 
                         <strong><a  href="productos.html"><i class="fas fa-shopping-bag">PRODUCTOS</i></a></strong>
-                 
+                        
                                <strong><a  href="contacto.html"><i class="fas fa-user">CONTACTO</i></a></strong> 
                             <strong><a  href="carrito.html" ><i class="fas fa-shopping-cart">PEDIDOS</i></a></strong>
                         </ul>
                     </nav>
                     
                     </div>
-           
+       
         
   </header>
-   <div id="mainContainer">
-            <div id="header">
-                <button id="toDarkMode" class="modeBtn">Dark Mode</button>
-                <button id="toLigthMode" class="modeBtn">Ligth Mode</button>
-            </div>
-            <div id="content">
-                <div id="store">
-                    <div id="categoryMenu">
+    <section>
+        
+         <div class="card-body">
+                            <h4 class="card-title">    <H2>CONTACTANOS!</H2>
+                            <FORM ACTION="https://outlook.office.com/mail/inbox" METHOD="post">
+                            
+                            <TABLE>
+                            
+                            <TD ALIGN=CENTER>NOMBRE:</TD>
+                            <TD><INPUT type="text" size=36 name="nombre"></TD>
+                            <TR><TD ALIGN=CENTER>EMAIL:</TD>
+                            <TD><INPUT type="text" size=36 name="direccion"></TD>
+                            <TR><TD ALIGN=CENTER>NUMERO DE CONTACTO:</TD>
+                            <TD><INPUT type="int" size=36 name="procedencia"></TD>
+                                
+                            <TR><TD ALIGN=CENTER>COMENTARIOS O RECLAMOS:</TD>
+                            <TD><TEXTAREA rows=5 cols=30 name="comentarios"></TEXTAREA></TD>
+                            
+                            </TABLE>
+                            
+                            <INPUT type="reset" value="Borrar todo"> <INPUT type="submit" value="Enviar">
+                            
+                            </FORM>
+                         </div>
+               
+    </section>
 
-                    </div>
-                    <h2 id="categoryName"></h2>
-                    <div id="productList">
-                       
-                    </div>
-                </div>
-                <div id="cartList">
-                    <h3> Mi Carrito de Compras </h3>
-                    <div id="productsInCart"></div>
-                    <div id="total">
-                        Total: 0
-                    </div>
-                </div>
-            </div>
-        </div>
+                                                        
 
-         <footer>
+    <footer>
         <div class="container-fluid">
             <nav class="navbar navbar-light justify-content-between p-3 mt-2  ">
                 
@@ -89,10 +95,13 @@
                                     <ion-icon name="logo-facebook"></ion-icon>
                                     </a>
                                 </div>
-                          
+                            <button class="btn btn-primary p-3">
+                                Contáctanos 
+                            </button>
                             
                         </form>
-                     
+                        
+                    
                           
                     
             </nav>
@@ -112,6 +121,6 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    
 </body>
+
 </html>

@@ -1,14 +1,15 @@
  @import url("https://fonts.googleapis.com/css2?family=Junge&display=swap"); 
 
 /*Estilos Generales */
- header {
+ header,  footer{
   font-family: "Junge", serif;
-
+background-color: black;
+border-radius: 20px;
   font-weight: bold;
 }
 body {
   background-color: black;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 20px;
   margin: 2%;
   padding: 2%;
@@ -26,7 +27,7 @@ display: grid;
 
   border-radius: 40px;
   padding: 1rem;
-  width: 55%;
+  width: 63%;
   margin: 1rem;
 }
 .foto {
@@ -56,16 +57,17 @@ h3 {
   border-bottom: 1px solid aquamarine;
   padding: 1%;
 }
-button {
+ button {
   background-color: black;
   width: 200px;
   height: 50px;
   color: rgb(199, 169, 0);
   font-weight: bold;
-  margin-left: -7%;
+  margin: auto;
   border-radius: 20px;
   border: 0;
   cursor: pointer;
+
 } 
  button:hover,
 button.active {
@@ -76,7 +78,7 @@ button.active {
 table {
   margin-top: 20px;
   margin-left: 2%;
-  border: 1px solid blue;
+  border: 1px solid black;
   width: 650px;
   border-radius: 20px;
 }
@@ -114,7 +116,7 @@ span {
 } 
 
 .pages {
-  background-color: #777faf;
+  background-color: #0f2394;
   border-radius: 20px;
 }
 
@@ -127,13 +129,26 @@ span {
   text-decoration: solid;
 }
 
-.pages ul a i {
+.pages ul a li {
   margin: 20px;
   padding: 10px;
   border-radius: 15px;
   background-color: #777faf;
   color: black;
 }
+.coloricono a ion-icon {
+  background-color: gray;
+  text-decoration: none;
+  height: 30px;
+  width: 30px;
+  font-size: 0.rem;
+  overflow: hidden;
+  color: black;
+  border-radius: 50%;
+}
+
+
+
 
 body {
   font: nomal 24px/1.5 "open Sans", sans-serif;

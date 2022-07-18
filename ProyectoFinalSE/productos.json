@@ -1,29 +1,29 @@
 [
   {
     "id": 101,
-    "nombre": "Dige Cruz",
-    "categoria": "Diges",
+    "nombre": "Dije Cruz",
+    "categoria": "Dijes",
     "foto": "/img/dige1.jpg",
     "precio": 85000
   },
   {
     "id": 102,
-    "nombre": "Dige Cruz",
-    "categoria": "Diges",
+    "nombre": "Dije Cruz",
+    "categoria": "Dijes",
     "foto": "/img/dige2.jpg",
     "precio": 135000
   },
   {
     "id": 103,
-    "nombre": "Dige Cruz",
-    "categoria": "Diges",
+    "nombre": "Dije Cruz",
+    "categoria": "Dijes",
     "foto": "/img/dige3.jpg",
     "precio": 123000
   },
   {
     "id": 104,
-    "nombre": "Dige Cruz",
-    "categoria": "Diges",
+    "nombre": "Dije Cruz",
+    "categoria": "Dijes",
     "foto": "/img/dige4.jpg",
     "precio": 135000
   },
@@ -83,15 +83,9 @@
     "foto": "/img/aretes4.jpg",
     "precio": 75000
   },
+
   {
     "id": 401,
-    "nombre": "Anilos",
-    "categoria": "anillo",
-    "foto": "/img/anillo1.jfif",
-    "precio": 185000
-  },
-  {
-    "id": 402,
     "nombre": "Anilos",
     "categoria": "anillo",
     "foto": "/img/anillo2.jpg",
@@ -102,13 +96,6 @@
     "nombre": "Pulsera",
     "categoria": "pulsera",
     "foto": "/img/pulsera1.jpg",
-    "precio": 123000
-  },
-  {
-    "id": 502,
-    "nombre": "Pulsera",
-    "categoria": "pulsera",
-    "foto": "/img/pulsera2.jfif",
     "precio": 123000
   }
 ]
